@@ -38,9 +38,8 @@
         position: absolute;
         top: 50%;
         top: calc(
-        min(500px, 100vw) / 16 * 9 / 2 + 1rem
-        ); /* centre verticalement ~50% vertical */
-        transform: translateY(-50%); /* methode du point mort */
+        min(500px, 100vw) / 16 * 9 / 2 + 1rem); 
+        transform: translateY(-50%);
         width: 2rem;
         height: 2rem;
         background: rgba(0,0,0,0.5);
@@ -67,13 +66,7 @@
         gap: 1rem;
         }
         .caroussel_lien.actif {
-            display: block; 
-          width: 10px; 
-          height: 10px; 
-         background-color: ghostwhite; 
          border: solid 1px black;
-         border-radius: 50%; 
-         text-indent: -9999px; 
         }
         .caroussel_liste-liens li {
          list-style: none; 
@@ -81,18 +74,13 @@
          margin-right: 10px; 
         }       
 
-        .caroussel_liste-liens a {
-          display: block; 
-          width: 10px; 
-          height: 10px; 
-         background-color: #000; 
-         border-radius: 50%; 
-         text-indent: -9999px; 
-        }
-        
         .carrousel_ecran figcaption {
             text-align: center;
             margin-bottom: 20px;
+        }
+        .caroussel_liste-liens img {
+        width: 50px; 
+         height: auto; 
         }
         </style>
 </head>
@@ -132,11 +120,11 @@
             </div>
         </div>
         <ul class="caroussel_liste-liens">
-            <li><a href="#ecran-1" :class="{actif:hrefCourant==='#ecran-1'}" class="caroussel_lien">ecran 1</a></li>
-            <li><a href="#ecran-2" :class="{actif:hrefCourant==='#ecran-2'}" class="caroussel_lien">ecran 2</a></li>
-            <li><a href="#ecran-3" :class="{actif:hrefCourant==='#ecran-3'}" class="caroussel_lien">ecran 3</a></li>
-            <li><a href="#ecran-4" :class="{actif:hrefCourant==='#ecran-4'}" class="caroussel_lien">ecran 4</a></li>
-            <li><a href="#ecran-5" :class="{actif:hrefCourant==='#ecran-5'}" class="caroussel_lien">ecran 5</a></li>
+            <li><a href="#ecran-1" :class="{actif:hrefCourant==='#ecran-1'}" class="caroussel_lien"><img src="https://picsum.photos/seed/1/500/300" alt="image ecran 1"></a></li>
+            <li><a href="#ecran-2" :class="{actif:hrefCourant==='#ecran-2'}" class="caroussel_lien"><img src="https://picsum.photos/seed/2/500/300" alt="image ecran 2"></a></li>
+            <li><a href="#ecran-3" :class="{actif:hrefCourant==='#ecran-3'}" class="caroussel_lien"><img src="https://picsum.photos/seed/3/500/300" alt="image ecran 3"></a></li>
+            <li><a href="#ecran-4" :class="{actif:hrefCourant==='#ecran-4'}" class="caroussel_lien"><img src="https://picsum.photos/seed/4/500/300" alt="image ecran 4"></a></li>
+            <li><a href="#ecran-5" :class="{actif:hrefCourant==='#ecran-5'}" class="caroussel_lien"><img src="https://picsum.photos/seed/5/500/300" alt="image ecran 5"></a></li>
         </ul>
     </div>
 </body>
