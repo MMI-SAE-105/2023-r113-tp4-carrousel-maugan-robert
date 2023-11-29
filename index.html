@@ -8,8 +8,8 @@
     <style>* {
         }
         img {
-          /* image responsive, largeur maxi */
-          /* hauteur "auto" */
+            max-width: 100%;
+          height: auto;
         }
         .carrousel_parent-ecrans {
           display: flex;
@@ -21,8 +21,9 @@
           /* permet de garder toute la largeur du parent */
         }
         .carrousel_ecran figure {
-          /* enlève les marges par défaut */
-        }</style>
+          margin: 0;
+        }
+        </style>
 </head>
 <body>
     <div class="carrousel" x-data="{}">
