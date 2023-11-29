@@ -58,10 +58,18 @@
         .carrousel_btn-apres {
         right: 0;
         }
+        .caroussel_liste-liens {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        gap: 1rem;
+        }
         </style>
 </head>
 <body>
-    <div class="carrousel" x-data="{}">
+    <div class="carrousel" x-data="{hrefCourant: '#ecran-1',}>
         <button @click="parent = $refs.parent,parent.scrollLeft -= parent.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"><</button><button @click="parent = $refs.parent,parent.scrollLeft += parent.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
         <div class="carrousel_parent-ecrans" x-ref="parent">
             <div id="ecran-1" class="carrousel_ecran">
