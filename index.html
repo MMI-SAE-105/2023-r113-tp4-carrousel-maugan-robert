@@ -67,19 +67,37 @@
         gap: 1rem;
         }
         .caroussel_lien.actif {
-        border: solid blueviolet;
+            display: block; 
+          width: 10px; 
+          height: 10px; 
+         background-color: ghostwhite; 
+         border: solid 1px black;
+         border-radius: 50%; 
+         text-indent: -9999px; 
+        }
+        .caroussel_liste-liens li {
+         list-style: none; 
+         display: inline-block; 
+         margin-right: 10px; 
+        }       
+
+        .caroussel_liste-liens a {
+          display: block; 
+          width: 10px; 
+          height: 10px; 
+         background-color: #000; 
+         border-radius: 50%; 
+         text-indent: -9999px; 
+        }
+        .figcaption {
+            text-align: center;
         }
         </style>
 </head>
 <body>
     <div class="carrousel" x-data="{hrefCourant:'#ecran-1',}">
         <button @click="parent = $refs.parent,parent.scrollLeft -= parent.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"><</button><button @click="parent = $refs.parent,parent.scrollLeft += parent.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
-        <div class="carrousel_parent-ecrans" x-ref="parent"       @scroll.debounce.50ms.passive="
-        hrefCourant = '#'+
-                          [...$refs.parent.children]
-                           .find(e=>e.getBoundingClientRect().x>=0)
-                           .id
-                                             ">
+        <div class="carrousel_parent-ecrans" x-ref="parent"  @scroll.debounce.250ms.passive="hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
             <div id="ecran-1" class="carrousel_ecran">
                 <figure>
                     <img src="https://picsum.photos/seed/1/500/300" alt="image ecran 1">
