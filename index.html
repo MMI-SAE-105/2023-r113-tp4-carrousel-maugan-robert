@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="//unpkg.com/alpinejs" defer></script>
-    <style>* {
+    <style>
+    * {
+         box-sizing: border-box;
         }
         img {
             max-width: 100%;
@@ -14,10 +16,13 @@
         .carrousel_parent-ecrans {
           display: flex;
           width: 100%;
+          overflow-x: scroll;
+          scroll-behavior: smooth;
         
         }
         .carrousel_ecran {
           width: 100%;
+          flex: none;
         }
         .carrousel_ecran figure {
           margin: 0;
