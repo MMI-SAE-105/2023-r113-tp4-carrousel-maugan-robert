@@ -95,6 +95,9 @@
         width: 50px; 
          height: auto; 
         }
+        h1 {
+            text-align: center;
+        }
         </style>
 </head>
 <body>
@@ -102,33 +105,35 @@
         <button @click="parent = $refs.parent,parent.scrollLeft -= parent.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"><</button><button @click="parent = $refs.parent,parent.scrollLeft += parent.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
         <div class="carrousel_parent-ecrans" x-ref="parent"  @scroll.debounce.250ms.passive="hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
             <div id="ecran-1" class="carrousel_ecran">
+                <h1>Destinations de notre agence</h1>
                 <figure>
-                    <img src="https://picsum.photos/seed/1/500/300" alt="image ecran 1">
-                    <figcaption>Ecran 1</figcaption>
+                    <img src="" alt="image ecran 1">
+                    <figcaption>Japon</figcaption>
                 </figure>
             </div>
             <div id="ecran-2" class="carrousel_ecran">
                 <figure>
                     <img src="https://picsum.photos/seed/2/500/300" alt="image ecran 2">
-                    <figcaption>Ecran 2</figcaption>
+                    <figcaption>Islande</figcaption>
                 </figure>
             </div>
             <div id="ecran-3" class="carrousel_ecran">
                 <figure>
                     <img src="https://picsum.photos/seed/3/500/300" alt="image ecran 3">
-                    <figcaption>Ecran 3</figcaption>
+                    <figcaption>Nouvelle-Zélande</figcaption>
                 </figure>
             </div>
             <div id="ecran-4" class="carrousel_ecran">
                 <figure>
                     <img src="https://picsum.photos/seed/4/500/300" alt="image ecran 4">
-                    <figcaption>Ecran 4</figcaption>
+                    <figcaption>Norvège</figcaption>
                 </figure>
             </div>
             <div id="ecran-5" class="carrousel_ecran">
                 <figure>
                     <img src="https://picsum.photos/seed/5/500/300" alt="image ecran 5">
-                    <figcaption>Ecran 5</figcaption>
+                    <figcaption>Corée du Sud</figcaption>
+                    <p></p>
                 </figure>
             </div>
         </div>
