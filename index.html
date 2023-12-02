@@ -11,7 +11,7 @@
         }
         img {
             max-width: 100%;
-          height: auto;
+            height: 250px;
         }
         .carrousel_parent-ecrans {
           display: flex;
@@ -58,20 +58,20 @@
         right: 0;
         }
 
-.caroussel_liste-liens a {
-    display: block; 
-    width: 15px; 
-    height: 15px; 
-    background-color: #000; 
-    border-radius: 50%; 
-    text-indent: -9999px;
-}
-.caroussel_liste-liens {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    margin-right: 42px;
-}
+        .caroussel_liste-liens a {
+            display: block; 
+            width: 15px; 
+            height: 15px; 
+            background-color: #000; 
+            border-radius: 50%; 
+            text-indent: -9999px;
+        }
+        .caroussel_liste-liens {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            margin-right: 42px;
+        }
         .caroussel_liste-liens li {
          display: inline-block; 
          margin-right: 10px; 
@@ -105,33 +105,33 @@
         <button @click="parent = $refs.parent,parent.scrollLeft -= parent.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"><</button><button @click="parent = $refs.parent,parent.scrollLeft += parent.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
         <div class="carrousel_parent-ecrans" x-ref="parent"  @scroll.debounce.250ms.passive="hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
             <div id="ecran-1" class="carrousel_ecran">
-                <h1>Destinations de notre agence</h1>
                 <figure>
-                    <img src="" alt="image ecran 1">
+                    <img src="img/voyage_photo_japon_automne_Japan_Kyoto_Parks_Pagodas_Autumn_Pond.jpg" alt="image ecran 1">
                     <figcaption>Japon</figcaption>
                 </figure>
             </div>
             <div id="ecran-2" class="carrousel_ecran">
                 <figure>
-                    <img src="https://picsum.photos/seed/2/500/300" alt="image ecran 2">
+                    <img src="img/7c7a65d5-9792-4168-9464-a64870154c9e.jpg" alt="image ecran 2">
                     <figcaption>Islande</figcaption>
                 </figure>
             </div>
             <div id="ecran-3" class="carrousel_ecran">
                 <figure>
-                    <img src="https://picsum.photos/seed/3/500/300" alt="image ecran 3">
+                    <img src="img/Fotolia_62395133_L.jpg" alt="image ecran 3">
                     <figcaption>Nouvelle-Zélande</figcaption>
+                    <p></p>
                 </figure>
             </div>
             <div id="ecran-4" class="carrousel_ecran">
                 <figure>
-                    <img src="https://picsum.photos/seed/4/500/300" alt="image ecran 4">
+                    <img src="img/adobestock_169422198-1-1.jpeg" alt="image ecran 4">
                     <figcaption>Norvège</figcaption>
                 </figure>
             </div>
             <div id="ecran-5" class="carrousel_ecran">
                 <figure>
-                    <img src="https://picsum.photos/seed/5/500/300" alt="image ecran 5">
+                    <img src="img/visiter-coree-du-sud.jpg" alt="image ecran 5">
                     <figcaption>Corée du Sud</figcaption>
                     <p></p>
                 </figure>
